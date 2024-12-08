@@ -1,189 +1,46 @@
-/* Dashboard Container Styling */
-.dashboard-container {
-    background-color: #ffffff;
-    color: #333;
-    padding: 40px;
-    width: 85%;
-    max-width: 1200px;
-    margin: 50px auto;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.5); /* Light gradient background */
-  }
-  
-  .dashboard-container:hover {
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Header Styling */
-  .dashboard-container h1 {
-    font-size: 36px;
-    color: #2c3e50;
-    margin-bottom: 40px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Overview Section */
-  .dashboard-overview {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 50px;
-  }
-  
-  .dashboard-summary {
-    background-color: #f9f9f9;
-    padding: 30px;
-    width: 48%;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-  }
-  
-  .dashboard-summary:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    background-color: #d5d9e2;
-  }
-  
-  .dashboard-summary h2 {
-    font-size: 24px;
-    color: #007bff;
-    margin-bottom: 15px;
-    font-weight: 600;
-  }
-  
-  .dashboard-summary p {
-    font-size: 20px;
-    color: #f81900fa; /* Red for Hollowed Tiles */
-    font-weight: 700;
-    letter-spacing: 0.5px;
-  }
-  
-  /* Recent Activity Section */
-  .dashboard-inspection-summary {
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-    transition: all 0.3s ease;
-  }
-  
-  .dashboard-inspection-summary:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    background-color: #d5d9e2;
-  }
-  
-  .dashboard-inspection-summary h3 {
-    font-size: 24px;
-    color: #007bff;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  
-  .dashboard-inspection-summary ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .dashboard-inspection-summary li {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-  }
-  
-  .dashboard-inspection-summary li::before {
-    content: "• ";
-    color: #007bff; /* Blue bullet points */
-    margin-right: 10px;
-  }
-  
-  /* Style for Hollow Tiles defect */
-  .hollow-defect {
-    color: #d9534f; /* Softer red color for Hollow Tiles */
-    font-weight: 700;
-    font-size: 22px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background-color: rgba(217, 53, 78, 0.1);
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    transition: all 0.3s ease;
-  }
-  
-  .hollow-defect:hover {
-    transform: scale(1.05);
-    background-color: rgba(217, 53, 78, 0.15);
-  }
+/* File Upload Section */
+.file-upload-section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #e9f3fb; /* Light blue background for file upload section */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
-  /* Logout Button Styling */
-.logout-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: rgba(255, 255, 255, 0.5); /* Red for logout button */
-  color: #fff; /* White text */
+.file-upload {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-upload label {
+  font-size: 16px;
+  color: #007bb5;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.file-upload input {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #007bb5;
+  border-radius: 5px;
+}
+
+.upload-button {
+  margin-top: 20px;
+  background-color: #007bb5;
+  color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.logout-button:hover {
-  background-color: #f30606;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+.upload-button:hover {
+  background-color: #005f87;
 }
-
-.logout-button:active {
-  transform: scale(0.98); /* Slight shrink effect on click */
-}
-  
-  /* Improved font and color for better readability */
-  .dashboard-summary p, .dashboard-inspection-summary li {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #555;
-  }
-  
-  /* Smooth hover effects for all elements */
-  .dashboard-summary:hover, .dashboard-inspection-summary:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
-  }
-  
-  /* Additional Styling for Overall Professional Look */
-  .dashboard-summary, .dashboard-inspection-summary {
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dashboard-summary p, .dashboard-inspection-summary li {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #555;
-    line-height: 1.6;
-  }
-  
-  /* Visual Fixes for Text Alignment and Padding */
-  .dashboard-summary p, .dashboard-inspection-summary li {
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
-  }
-  

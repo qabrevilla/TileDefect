@@ -1,12 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
 import './Dashboard.css';
 
 function Dashboard() {
   const navigate = useNavigate(); // Hook for navigation
 
+  // State for file uploads
+  const [visualFile, setVisualFile] = useState(null);
+  const [soundFile, setSoundFile] = useState(null);
+
+  // State for display summary
+  const [defectSummary, setDefectSummary] = useState({
+    visualDefects: { crack: 0, scratch: 0, stain: 0 },
+    soundDefects: 'None detected',
+  });
+
   const handleLogout = () => {
-    navigate('/App'); 
+    navigate('/App');
+  };
+
+  // File upload handlers
+  const handleVisualFileChange = (e) => {
+    setVisualFile(e.target.files[0]);
+  };
+
+  const handleSoundFileChange = (e) => {
+    setSoundFile(e.target.files[0]);
+  };
+
+  const handleFileSubmit = () => {
+    if (visualFile && soundFile) {
+      // Mock logic for processing files
+      setDefectSummary({
+        visualDefects: { crack: 1, scratch: 2, stain: 1 },
+        soundDefects: 'Hollowed Tile Detected',
+      });
+      alert('Files processed successfully!');
+    } else {
+      alert('Please upload both files.');
+    }
   };
 
   return (
@@ -15,29 +47,55 @@ function Dashboard() {
       <button className="logout-button" onClick={handleLogout}>
         Logout
       </button>
-      
-      <h1>Dashboard</h1>
-      
+
+      <h1>DaGFAGAGA</h1>
+
+      {/* File Upload Section */}
+      <div className="file-upload-section">
+        <h2>Upload Files</h2>
+        <div className="file-upload">
+          <label htmlFor="visual-upload">Visual Defect File:</label>
+          <input
+            type="file"
+            id="visual-upload"
+            onChange={handleVisualFileChange}
+          />
+        </div>
+        <div className="file-upload">
+          <label htmlFor="sound-upload">Sound Defect File:</label>
+          <input
+            type="file"
+            id="sound-upload"
+            onChange={handleSoundFileChange}
+          />
+        </div>
+        <button className="upload-button" onClick={handleFileSubmit}>
+          Process Files
+        </button>
+      </div>
+
       {/* Overview Section */}
       <div className="dashboard-overview">
         <div className="dashboard-summary">
           <h2>Visual Defects Detected</h2>
-          <p>Crack=0 | Scratch=1 | Stain=1</p> {/* Example number for visual defects */}
+          <p>
+            Crack: {defectSummary.visualDefects.crack} | Scratch: {defectSummary.visualDefects.scratch} | Stain: {defectSummary.visualDefects.stain}
+          </p>
         </div>
         <div className="dashboard-summary">
           <h2>Sound Defect</h2>
-          <p>Hollowed Tile</p> {/* Example breakdown */}
+          <p>{defectSummary.soundDefects}</p>
         </div>
       </div>
-      
+
       {/* Recent Activity Section */}
       <div className="dashboard-inspection-summary">
         <h3>Inspection Summary</h3>
         <ul>
-          <li>Crack=0</li>
-          <li>Scratch=0</li>
-          <li>Stain=0</li>
-          <li>Hollowed Tiles = True</li>
+          <li>Crack: {defectSummary.visualDefects.crack}</li>
+          <li>Scratch: {defectSummary.visualDefects.scratch}</li>
+          <li>Stain: {defectSummary.visualDefects.stain}</li>
+          <li>Sound Defect: {defectSummary.soundDefects}</li>
         </ul>
       </div>
     </div>
