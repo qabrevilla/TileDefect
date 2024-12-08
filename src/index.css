@@ -1,0 +1,70 @@
+/* Center the entire page content */
+body {
+  margin: 0;
+  height: 100vh; /* Ensure the body takes up the full height of the viewport */
+  display: flex; 
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  background-color: #f0f0f0; /* Light gray background for contrast */
+}
+
+.login-container {
+  background-color: #90a8c2; /* Blue background for the container */
+  color: rgb(255, 255, 255);  /* White text for contrast */
+  padding: 30px; /* Adjust padding */
+  border: 3px solid rgb(46, 75, 99);
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Create two columns */
+  grid-gap: 10px; /* Add some gap between columns */
+}
+
+.input-container {
+  grid-column: span 2; /* Make the input fields span across both columns */
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid white; /* White border to match the theme */
+  background-color: #ffffff; /* White background for input fields */
+  color: #333; /* Dark text for better readability */
+}
+
+input:focus {
+  outline: none;
+  border-color: #1a3c64; /* Change border color on focus */
+}
+
+button {
+  background-color: #3f6186; /* Dark blue background for the button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  grid-column: span 2; /* Make the button span across both columns */
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #003d7a; /* Darker blue when hovered */
+}
+
+button:active {
+  background-color: #003b63; /* Even darker blue on active press */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/*Dashboard*/
+
+

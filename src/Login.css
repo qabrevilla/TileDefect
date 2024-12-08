@@ -1,0 +1,108 @@
+/* Center the entire page content */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  background: url('./src/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Login Container Styling */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.425); /* Blue background with 80% opacity */
+  color: white;
+  padding: 40px; /* Increase padding for more spacious look */
+  border-radius: 15px; /* Rounded corners for a smoother look */
+  border: none;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  backdrop-filter: blur(10px); /* Adds a slight blur effect for a modern look */
+}
+
+/* Input Container Styling */
+.input-container {
+  grid-column: span 2; /* Make the input fields span across both columns */
+  margin-bottom: 15px; /* Increase space between input fields */
+}
+
+/* Input Field Styling */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 10px; /* Rounded corners for input fields */
+  border: 1px solid #06203b; /* Border color to match the container */
+  background-color: #f4f9fc; /* Light background for input fields */
+  color: #333; /* Dark text for readability */
+  font-size: 16px; /* Larger font size for better legibility */
+  transition: all 0.3s ease; /* Smooth transition for focus effect */
+}
+
+/* Input Focus Effect */
+input:focus {
+  outline: none;
+  border-color: #0056b3; /* Darker blue border on focus */
+  box-shadow: 0 0 5px rgba(0, 91, 179, 0.5); /* Light glow effect */
+}
+
+/* Button Styling */
+button {
+  background-color: #638cb8; /* Muted blue background for the button */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px; /* Rounded corners for button */
+  cursor: pointer;
+  grid-column: span 2; /* Make the button span across both columns */
+  font-size: 18px;
+  transition: all 0.3s ease;
+  margin-top: 10px; /* Add space between button and input fields */
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #4a6fa1; /* Slightly darker blue when hovered */
+  transform: translateY(-2px); /* Button slightly lifts on hover */
+}
+
+/* Button Active Effect */
+button:active {
+  background-color: #003d7a; /* Darker blue on active press */
+  transform: translateY(0); /* Reset button position */
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 30px; /* Slightly larger font size for better visibility */
+  font-weight: bold;
+  letter-spacing: 1px; /* Add space between letters for a sleek look */
+  text-align: center; /* Center-align the text */
+}
+
+/* Heading Styling */
+h2 {
+  margin-bottom: 20px;
+  font-size: 26px; /* Slightly larger font size for better visibility */
+  font-weight: bold;
+  letter-spacing: 1px; /* Add space between letters for a sleek look */
+}
+
+/* Adding Spacing and Visual Appeal */
+.login-container p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.8); /* Lighter text for secondary content */
+}
+
+/* Mobile responsiveness: Ensure the layout adjusts for smaller screens */
+@media (max-width: 480px) {
+  .login-container {
+      width: 90%; /* Make the container responsive */
+      padding: 20px; /* Adjust padding for smaller screens */
+  }
+}
