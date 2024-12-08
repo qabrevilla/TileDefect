@@ -32,7 +32,7 @@ function Dashboard() {
     if (visualFile && soundFile) {
       // Mock logic for processing files
       setDefectSummary({
-        visualDefects: { crack: 1, scratch: 2, stain: 1 },
+        visualDefects: { crack: 1, scratch: 0, stain: 0 },
         soundDefects: 'Hollowed Tile Detected',
       });
       alert('Files processed successfully!');
@@ -101,5 +101,5 @@ function Dashboard() {
     </div>
   );
 }
-
+ 
 export default Dashboard;
