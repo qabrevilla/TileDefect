@@ -48,7 +48,7 @@ function Dashboard() {
         Logout
       </button>
 
-      <h1>DaGFAGAGA</h1>
+      <h1>Dashboard</h1>
 
       {/* File Upload Section */}
       <div className="file-upload-section">
